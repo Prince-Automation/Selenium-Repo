@@ -1,17 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-25T09:42:54 EDT" name="Default suite" finished-at="2025-04-25T09:42:54 EDT" duration-ms="56">
+  <suite started-at="2025-04-25T21:21:34 EDT" name="Suite" finished-at="2025-04-25T21:21:34 EDT" duration-ms="113">
     <groups>
     </groups>
-    <test started-at="2025-04-25T09:42:54 EDT" name="Default test" finished-at="2025-04-25T09:42:54 EDT" duration-ms="56">
-      <class name="framework.Testrunning">
-        <test-method signature="Demo()[pri:0, instance:framework.Testrunning@38c6f217]" started-at="2025-04-25T09:42:54 EDT" name="Demo" finished-at="2025-04-25T09:42:54 EDT" duration-ms="10" status="PASS">
+    <test started-at="2025-04-25T21:21:34 EDT" name="Personal Loan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="113">
+      <class name="framework.PersonalLoanTestCase">
+        <test-method signature="personalLoan()[pri:0, instance:framework.PersonalLoanTestCase@799f10e1]" started-at="2025-04-25T21:21:34 EDT" name="personalLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- personalLoan -->
+      </class> <!-- framework.PersonalLoanTestCase -->
+      <class name="framework.HomeLoanTestCases">
+        <test-method signature="apiHomeLoan()[pri:0, instance:framework.HomeLoanTestCases@18078bef]" started-at="2025-04-25T21:21:34 EDT" name="apiHomeLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiHomeLoan -->
+        <test-method signature="appiumHomeLoan()[pri:0, instance:framework.HomeLoanTestCases@18078bef]" started-at="2025-04-25T21:21:34 EDT" name="appiumHomeLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumHomeLoan -->
+        <test-method signature="homeLoan()[pri:0, instance:framework.HomeLoanTestCases@18078bef]" started-at="2025-04-25T21:21:34 EDT" name="homeLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homeLoan -->
+      </class> <!-- framework.HomeLoanTestCases -->
+      <class name="framework.TestRunning">
+        <test-method signature="Demo()[pri:0, instance:framework.TestRunning@4c371370]" started-at="2025-04-25T21:21:34 EDT" name="Demo" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Demo -->
-      </class> <!-- framework.Testrunning -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method signature="Demo2()[pri:0, instance:framework.TestRunning@4c371370]" started-at="2025-04-25T21:21:34 EDT" name="Demo2" finished-at="2025-04-25T21:21:34 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo2 -->
+      </class> <!-- framework.TestRunning -->
+      <class name="framework.CarLoanTestCases">
+        <test-method signature="apiCarLoan()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="apiCarLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiCarLoan -->
+        <test-method signature="appiumCarLoan()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoan -->
+        <test-method signature="appiumCarLoanCheckout()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanCheckout" finished-at="2025-04-25T21:21:34 EDT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanCheckout -->
+        <test-method signature="appiumCarLoanCheckin()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanCheckin" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanCheckin -->
+        <test-method signature="appiumCarLoanLogin()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanLogin" finished-at="2025-04-25T21:21:34 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanLogin -->
+        <test-method signature="appiumCarLoanNavigate()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanNavigate" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanNavigate -->
+        <test-method signature="appiumCarLoanPurchase()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanPurchase" finished-at="2025-04-25T21:21:34 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanPurchase -->
+        <test-method signature="appiumCarLoanSignout()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanSignout" finished-at="2025-04-25T21:21:34 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanSignout -->
+        <test-method signature="appiumCarLoanSignup()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="appiumCarLoanSignup" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumCarLoanSignup -->
+        <test-method signature="carLoan()[pri:0, instance:framework.CarLoanTestCases@409bf450]" started-at="2025-04-25T21:21:34 EDT" name="carLoan" finished-at="2025-04-25T21:21:34 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- carLoan -->
+      </class> <!-- framework.CarLoanTestCases -->
+    </test> <!-- Personal Loan -->
+  </suite> <!-- Suite -->
 </testng-results>
