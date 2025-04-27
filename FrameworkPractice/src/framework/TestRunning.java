@@ -23,7 +23,7 @@ public class TestRunning {
 		System.out.println("Execute this last Suite");
 	}
 	
-	@Test
+	@Test(groups = {"Smoke"})
 	public void Demo() {
 		System.out.println("hello");
 	}

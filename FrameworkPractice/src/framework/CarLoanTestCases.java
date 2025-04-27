@@ -1,5 +1,7 @@
 package framework;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class CarLoanTestCases {
@@ -9,7 +11,18 @@ public class CarLoanTestCases {
 		System.out.println("This is CarLoan");
 	}
 	
-	@Test
+	@BeforeClass
+	public void beforeClass() {
+		System.out.println("This is Before Class method");
+	}
+	
+	
+	@AfterClass
+	public void afterClassCarLoan() {
+		System.out.println("This is after Class method");
+	}
+	
+	@Test(groups = {"Smoke"}) 
 	public void apiCarLoan() {
 		System.out.println("API Car Loan");
 	}

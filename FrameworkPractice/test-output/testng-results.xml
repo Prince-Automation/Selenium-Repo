@@ -1,53 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="13" passed="4" failed="0" skipped="0">
+<testng-results ignored="11" total="13" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-25T21:54:43 EDT" name="Suite" finished-at="2025-04-25T21:54:43 EDT" duration-ms="109">
+  <suite started-at="2025-04-27T00:14:33 EDT" name="Suite" finished-at="2025-04-27T00:14:33 EDT" duration-ms="94">
     <groups>
+      <group name="Smoke">
+        <method signature="CarLoanTestCases.apiCarLoan()[pri:0, instance:framework.CarLoanTestCases@128d2484]" name="apiCarLoan" class="framework.CarLoanTestCases"/>
+        <method signature="TestRunning.Demo()[pri:0, instance:framework.TestRunning@2a65fe7c]" name="Demo" class="framework.TestRunning"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-04-25T21:54:43 EDT" name="Personal Loan" finished-at="2025-04-25T21:54:43 EDT" duration-ms="47">
-      <class name="framework.PersonalLoanTestCase">
-        <test-method signature="personalLoan()[pri:0, instance:framework.PersonalLoanTestCase@73a1e9a9]" started-at="2025-04-25T21:54:43 EDT" name="personalLoan" finished-at="2025-04-25T21:54:43 EDT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- personalLoan -->
-      </class> <!-- framework.PersonalLoanTestCase -->
+    <test started-at="2025-04-27T00:14:33 EDT" name="Personal Loan" finished-at="2025-04-27T00:14:33 EDT" duration-ms="94">
       <class name="framework.TestRunning">
-        <test-method is-config="true" signature="preRequisite()[pri:0, instance:framework.TestRunning@235834f2]" started-at="2025-04-25T21:54:43 EDT" name="preRequisite" finished-at="2025-04-25T21:54:43 EDT" duration-ms="1" status="PASS">
+        <test-method signature="Demo()[pri:0, instance:framework.TestRunning@2a65fe7c]" started-at="2025-04-27T00:14:33 EDT" name="Demo" finished-at="2025-04-27T00:14:33 EDT" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preRequisite -->
-        <test-method signature="Demo2()[pri:0, instance:framework.TestRunning@235834f2]" started-at="2025-04-25T21:54:43 EDT" name="Demo2" finished-at="2025-04-25T21:54:43 EDT" duration-ms="8" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Demo2 -->
-        <test-method is-config="true" signature="postRequisite()[pri:0, instance:framework.TestRunning@235834f2]" started-at="2025-04-25T21:54:43 EDT" name="postRequisite" finished-at="2025-04-25T21:54:43 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postRequisite -->
-      </class> <!-- framework.TestRunning -->
-    </test> <!-- Personal Loan -->
-    <test started-at="2025-04-25T21:54:43 EDT" name="Car Loan" finished-at="2025-04-25T21:54:43 EDT" duration-ms="7">
-      <class name="framework.TestRunning">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:framework.TestRunning@235834f2]" started-at="2025-04-25T21:54:43 EDT" name="beforeSuite" finished-at="2025-04-25T21:54:43 EDT" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:framework.TestRunning@235834f2]" started-at="2025-04-25T21:54:43 EDT" name="afterSuite" finished-at="2025-04-25T21:54:43 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
+        </test-method> <!-- Demo -->
       </class> <!-- framework.TestRunning -->
       <class name="framework.CarLoanTestCases">
-        <test-method signature="apiCarLoan()[pri:0, instance:framework.CarLoanTestCases@185a6e9]" started-at="2025-04-25T21:54:43 EDT" name="apiCarLoan" finished-at="2025-04-25T21:54:43 EDT" duration-ms="2" status="PASS">
+        <test-method signature="apiCarLoan()[pri:0, instance:framework.CarLoanTestCases@128d2484]" started-at="2025-04-27T00:14:33 EDT" name="apiCarLoan" finished-at="2025-04-27T00:14:33 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- apiCarLoan -->
-        <test-method signature="carLoan()[pri:0, instance:framework.CarLoanTestCases@185a6e9]" started-at="2025-04-25T21:54:43 EDT" name="carLoan" finished-at="2025-04-25T21:54:43 EDT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- carLoan -->
       </class> <!-- framework.CarLoanTestCases -->
-    </test> <!-- Car Loan -->
+    </test> <!-- Personal Loan -->
   </suite> <!-- Suite -->
 </testng-results>

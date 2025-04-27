@@ -50,17 +50,17 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\caree\eclipse-workspace\FrameworkPractice\testng.xml</span>
+                    <span>C:\Users\caree\eclipse-workspace\FrameworkPractice\testng3.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="framework.TestRunning" class="method navigator-link" hash-for-method="Demo2">Demo2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="framework.TestRunning" class="method navigator-link" hash-for-method="Demo">Demo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="framework.CarLoanTestCases" class="method navigator-link" hash-for-method="apiCarLoan">apiCarLoan</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="framework.CarLoanTestCases" class="method navigator-link" hash-for-method="carLoan">carLoan</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="framework.PersonalLoanTestCase" class="method navigator-link" hash-for-method="personalLoan">personalLoan</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -136,36 +126,6 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">framework.TestRunning</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Demo2">
-                  </a> <!-- Demo2 -->
-                  <span class="method-name">Demo2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">framework.PersonalLoanTestCase</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="personalLoan">
-                  </a> <!-- personalLoan -->
-                  <span class="method-name">personalLoan</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">framework.CarLoanTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -176,11 +136,19 @@
                   <span class="method-name">apiCarLoan</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">framework.TestRunning</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="carLoan">
-                  </a> <!-- carLoan -->
-                  <span class="method-name">carLoan</span>
+                  <a name="Demo">
+                  </a> <!-- Demo -->
+                  <span class="method-name">Demo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,7 +156,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\caree\eclipse-workspace\FrameworkPractice\testng.xml</span>
+            <span class="header-content">C:\Users\caree\eclipse-workspace\FrameworkPractice\testng3.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,24 +164,17 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Personal Loan&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;Smoke&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;framework.TestRunning&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;Demo2&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- framework.TestRunning --&gt;
+      &lt;class name=&quot;framework.TestRunning&quot;/&gt;
       &lt;class name=&quot;framework.PersonalLoanTestCase&quot;/&gt;
+      &lt;class name=&quot;framework.CarLoanTestCases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Personal Loan --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Car Loan&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;framework.CarLoanTestCases&quot;&gt;
-        &lt;methods&gt;
-          &lt;exclude name=&quot;appium.*&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- framework.CarLoanTestCases --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Car Loan --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -225,10 +186,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Personal Loan (2 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">Car Loan (1 class)</span>
+                <span class="test-name">Personal Loan (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,6 +196,18 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">Demo</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">apiCarLoan</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -254,28 +224,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Demo2')
+data.setCell(0, 1, 'Demo')
 data.setCell(0, 2, 'framework.TestRunning')
-data.setCell(0, 3, 8);
+data.setCell(0, 3, 20);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'personalLoan')
-data.setCell(1, 2, 'framework.PersonalLoanTestCase')
+data.setCell(1, 1, 'apiCarLoan')
+data.setCell(1, 2, 'framework.CarLoanTestCases')
 data.setCell(1, 3, 2);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'apiCarLoan')
-data.setCell(2, 2, 'framework.CarLoanTestCases')
-data.setCell(2, 3, 2);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'carLoan')
-data.setCell(3, 2, 'framework.CarLoanTestCases')
-data.setCell(3, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 ms</span>
+              <span class="suite-total-time">Total running time: 22 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -290,34 +252,43 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">9 ignored methods</span>
+            <span class="header-content">11 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">framework.TestRunning</span>
+              <span class="ignored-class-name">framework.CarLoanTestCases</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">Demo</span>
+                <span class="ignored-method-name">appiumCarLoanPurchase</span>
+                <br/>
+                <span class="ignored-method-name">carLoan</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoanCheckout</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoanSignup</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoanSignout</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoan</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoanNavigate</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoanLogin</span>
+                <br/>
+                <span class="ignored-method-name">appiumCarLoanCheckin</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">framework.CarLoanTestCases</span>
+              <span class="ignored-class-name">framework.TestRunning</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">appiumCarLoan</span>
+                <span class="ignored-method-name">Demo2</span>
                 <br/>
-                <span class="ignored-method-name">appiumCarLoanCheckout</span>
-                <br/>
-                <span class="ignored-method-name">appiumCarLoanCheckin</span>
-                <br/>
-                <span class="ignored-method-name">appiumCarLoanSignup</span>
-                <br/>
-                <span class="ignored-method-name">appiumCarLoanPurchase</span>
-                <br/>
-                <span class="ignored-method-name">appiumCarLoanLogin</span>
-                <br/>
-                <span class="ignored-method-name">appiumCarLoanNavigate</span>
-                <br/>
-                <span class="ignored-method-name">appiumCarLoanSignout</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">framework.PersonalLoanTestCase</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">personalLoan</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -330,50 +301,17 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">framework.TestRunning</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
+              <div class="test-method">
+                <span class="method-name">Demo</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">preRequisite</span>
-                <span class="method-start">18 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">Demo2</span>
-                <span class="method-start">41 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">framework.PersonalLoanTestCase</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">personalLoan</span>
-                <span class="method-start">55 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">framework.TestRunning</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">postRequisite</span>
-                <span class="method-start">59 ms</span>
-              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">framework.CarLoanTestCases</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">apiCarLoan</span>
-                <span class="method-start">116 ms</span>
+                <span class="method-start">30 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">carLoan</span>
-                <span class="method-start">119 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">framework.TestRunning</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">127 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

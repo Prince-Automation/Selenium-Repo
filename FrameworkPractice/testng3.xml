@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite"> <!-- This can be considered as regrssion or smoke suite-->
+
+	<test thread-count="5" name="Personal Loan"> <!--Test folder name = module-->
+		<groups>
+		<run>
+		<include name="Smoke"></include>
+		</run>
+		</groups>>
+		
+		
+		<classes>
+			<class name="framework.TestRunning" /> <!--Test Cases-->
+			<class name="framework.PersonalLoanTestCase" />
+			<class name="framework.CarLoanTestCases" />
+		</classes>
+	</test> <!--Test -->
+
+</suite> <!--Suite -->
