@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="13" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-27T00:14:33 EDT" name="Suite" finished-at="2025-04-27T00:14:33 EDT" duration-ms="94">
+  <suite started-at="2025-04-28T09:43:07 EDT" name="Default suite" finished-at="2025-04-28T09:43:07 EDT" duration-ms="63">
     <groups>
-      <group name="Smoke">
-        <method signature="CarLoanTestCases.apiCarLoan()[pri:0, instance:framework.CarLoanTestCases@128d2484]" name="apiCarLoan" class="framework.CarLoanTestCases"/>
-        <method signature="TestRunning.Demo()[pri:0, instance:framework.TestRunning@2a65fe7c]" name="Demo" class="framework.TestRunning"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-04-27T00:14:33 EDT" name="Personal Loan" finished-at="2025-04-27T00:14:33 EDT" duration-ms="94">
-      <class name="framework.TestRunning">
-        <test-method signature="Demo()[pri:0, instance:framework.TestRunning@2a65fe7c]" started-at="2025-04-27T00:14:33 EDT" name="Demo" finished-at="2025-04-27T00:14:33 EDT" duration-ms="20" status="PASS">
+    <test started-at="2025-04-28T09:43:07 EDT" name="Default test" finished-at="2025-04-28T09:43:07 EDT" duration-ms="63">
+      <class name="framework.HomeLoanTestCases">
+        <test-method signature="apiHomeLoan()[pri:0, instance:framework.HomeLoanTestCases@35cabb2a]" started-at="2025-04-28T09:43:07 EDT" name="apiHomeLoan" finished-at="2025-04-28T09:43:07 EDT" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Demo -->
-      </class> <!-- framework.TestRunning -->
-      <class name="framework.CarLoanTestCases">
-        <test-method signature="apiCarLoan()[pri:0, instance:framework.CarLoanTestCases@128d2484]" started-at="2025-04-27T00:14:33 EDT" name="apiCarLoan" finished-at="2025-04-27T00:14:33 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- apiHomeLoan -->
+        <test-method signature="homeLoan()[pri:0, instance:framework.HomeLoanTestCases@35cabb2a]" started-at="2025-04-28T09:43:07 EDT" name="homeLoan" finished-at="2025-04-28T09:43:07 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apiCarLoan -->
-      </class> <!-- framework.CarLoanTestCases -->
-    </test> <!-- Personal Loan -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- homeLoan -->
+        <test-method signature="appiumHomeLoan()[pri:0, instance:framework.HomeLoanTestCases@35cabb2a]" started-at="2025-04-28T09:43:07 EDT" name="appiumHomeLoan" finished-at="2025-04-28T09:43:07 EDT" depends-on-methods="framework.HomeLoanTestCases.homeLoan" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appiumHomeLoan -->
+      </class> <!-- framework.HomeLoanTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

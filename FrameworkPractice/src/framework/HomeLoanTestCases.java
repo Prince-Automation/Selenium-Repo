@@ -14,7 +14,7 @@ public class HomeLoanTestCases {
 		System.out.println("API Home Loan");
 	}
 	
-	@Test
+	@Test(dependsOnMethods = "homeLoan")
 	public void appiumHomeLoan() {
 		System.out.println("Appium Home Loan");
 	}

@@ -4,12 +4,12 @@
 
 	<test thread-count="5" name="Personal Loan"> <!--Test folder name = module-->
 		<groups>
-		<run>
-		<include name="Smoke"></include>
-		</run>
-		</groups>>
-		
-		
+			<run>
+				<exclude name="Smoke"> </exclude>
+			</run>
+		</groups>
+
+
 		<classes>
 			<class name="framework.TestRunning" /> <!--Test Cases-->
 			<class name="framework.PersonalLoanTestCase" />
