@@ -18,5 +18,10 @@ public class HomeLoanTestCases {
 	public void appiumHomeLoan() {
 		System.out.println("Appium Home Loan");
 	}
+	
+	@Test
+	public void apiLoan() {
+		System.out.println("API Loan");
+	}
 
 }
