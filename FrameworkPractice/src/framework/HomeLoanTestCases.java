@@ -19,7 +19,7 @@ public class HomeLoanTestCases {
 		System.out.println("Appium Home Loan");
 	}
 	
-	@Test
+	@Test(timeOut = 4000)
 	public void apiLoan() {
 		System.out.println("API Loan");
 	}

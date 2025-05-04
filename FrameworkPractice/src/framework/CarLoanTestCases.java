@@ -2,13 +2,17 @@ package framework;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class CarLoanTestCases {
 	
+	@Parameters({"URL","Key"})
 	@Test
-	public void carLoan() {
+	public void carLoan(String url, String Key) {
 		System.out.println("This is CarLoan");
+		System.out.println(url);
+		System.out.println(Key);
 	}
 	
 	@BeforeClass

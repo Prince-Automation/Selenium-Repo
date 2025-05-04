@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\caree\AppData\Local\Temp\testng-eclipse-83707357\testng-customsuite.xml</span>
+                    <span>C:\Users\caree\AppData\Local\Temp\testng-eclipse-1523261502\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +103,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="framework.HomeLoanTestCases" class="method navigator-link" hash-for-method="apiHomeLoan">apiHomeLoan</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="framework.PersonalLoanTestCase" class="method navigator-link" hash-for-method="personalLoan(firstname, password)">personalLoan(firstname, password)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="framework.HomeLoanTestCases" class="method navigator-link" hash-for-method="apiLoan">apiLoan</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="framework.PersonalLoanTestCase" class="method navigator-link" hash-for-method="personalLoan( ,  )">personalLoan( ,  )</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="framework.HomeLoanTestCases" class="method navigator-link" hash-for-method="appiumHomeLoan">appiumHomeLoan</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="framework.HomeLoanTestCases" class="method navigator-link" hash-for-method="homeLoan">homeLoan</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="framework.PersonalLoanTestCase" class="method navigator-link" hash-for-method="personalLoan(invaliddata, invaliddatapassword)">personalLoan(invaliddata, invaliddatapassword)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,35 +131,31 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">framework.HomeLoanTestCases</span>
+              <span class="class-name">framework.PersonalLoanTestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="apiHomeLoan">
-                  </a> <!-- apiHomeLoan -->
-                  <span class="method-name">apiHomeLoan</span>
+                  <a name="personalLoan(firstname, password)">
+                  </a> <!-- personalLoan(firstname, password) -->
+                  <span class="method-name">personalLoan</span>
+                  <span class="parameters">(firstname,password)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="apiLoan">
-                  </a> <!-- apiLoan -->
-                  <span class="method-name">apiLoan</span>
+                  <a name="personalLoan( ,  )">
+                  </a> <!-- personalLoan( ,  ) -->
+                  <span class="method-name">personalLoan</span>
+                  <span class="parameters">( , )</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="appiumHomeLoan">
-                  </a> <!-- appiumHomeLoan -->
-                  <span class="method-name">appiumHomeLoan</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="homeLoan">
-                  </a> <!-- homeLoan -->
-                  <span class="method-name">homeLoan</span>
+                  <a name="personalLoan(invaliddata, invaliddatapassword)">
+                  </a> <!-- personalLoan(invaliddata, invaliddatapassword) -->
+                  <span class="method-name">personalLoan</span>
+                  <span class="parameters">(invaliddata,invaliddatapassword)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -172,7 +163,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\caree\AppData\Local\Temp\testng-eclipse-83707357\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\caree\AppData\Local\Temp\testng-eclipse-1523261502\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -181,7 +172,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;framework.HomeLoanTestCases&quot;/&gt;
+      &lt;class name=&quot;framework.PersonalLoanTestCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -221,28 +212,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'apiHomeLoan')
-data.setCell(0, 2, 'framework.HomeLoanTestCases')
-data.setCell(0, 3, 12);
+data.setCell(0, 1, 'personalLoan')
+data.setCell(0, 2, 'framework.PersonalLoanTestCase')
+data.setCell(0, 3, 10);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'homeLoan')
-data.setCell(1, 2, 'framework.HomeLoanTestCases')
-data.setCell(1, 3, 2);
+data.setCell(1, 1, 'personalLoan')
+data.setCell(1, 2, 'framework.PersonalLoanTestCase')
+data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'apiLoan')
-data.setCell(2, 2, 'framework.HomeLoanTestCases')
+data.setCell(2, 1, 'personalLoan')
+data.setCell(2, 2, 'framework.PersonalLoanTestCase')
 data.setCell(2, 3, 1);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'appiumHomeLoan')
-data.setCell(3, 2, 'framework.HomeLoanTestCases')
-data.setCell(3, 3, 1);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
+              <span class="suite-total-time">Total running time: 12 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -268,22 +255,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">framework.HomeLoanTestCases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">framework.PersonalLoanTestCase</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">apiHomeLoan</span>
+                <span class="method-name">personalLoan(firstname, password)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">homeLoan</span>
+                <span class="method-name">personalLoan(invaliddata, invaliddatapassword)</span>
+                <span class="method-start">12 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">personalLoan( ,  )</span>
                 <span class="method-start">14 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">apiLoan</span>
-                <span class="method-start">17 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">appiumHomeLoan</span>
-                <span class="method-start">22 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,29 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-01T20:16:33 EDT" name="Default suite" finished-at="2025-05-01T20:16:33 EDT" duration-ms="64">
+  <suite started-at="2025-05-03T21:12:33 EDT" name="Default suite" finished-at="2025-05-03T21:12:33 EDT" duration-ms="62">
     <groups>
     </groups>
-    <test started-at="2025-05-01T20:16:33 EDT" name="Default test" finished-at="2025-05-01T20:16:33 EDT" duration-ms="64">
-      <class name="framework.HomeLoanTestCases">
-        <test-method signature="apiHomeLoan()[pri:0, instance:framework.HomeLoanTestCases@7e07db1f]" started-at="2025-05-01T20:16:33 EDT" name="apiHomeLoan" finished-at="2025-05-01T20:16:33 EDT" duration-ms="12" status="PASS">
+    <test started-at="2025-05-03T21:12:33 EDT" name="Default test" finished-at="2025-05-03T21:12:33 EDT" duration-ms="62">
+      <class name="framework.PersonalLoanTestCase">
+        <test-method signature="personalLoan(java.lang.String,java.lang.String)[pri:0, instance:framework.PersonalLoanTestCase@6adbc9d]" started-at="2025-05-03T21:12:33 EDT" name="personalLoan" data-provider="getData" finished-at="2025-05-03T21:12:33 EDT" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firstname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apiHomeLoan -->
-        <test-method signature="homeLoan()[pri:0, instance:framework.HomeLoanTestCases@7e07db1f]" started-at="2025-05-01T20:16:33 EDT" name="homeLoan" finished-at="2025-05-01T20:16:33 EDT" duration-ms="2" status="PASS">
+        </test-method> <!-- personalLoan -->
+        <test-method signature="personalLoan(java.lang.String,java.lang.String)[pri:0, instance:framework.PersonalLoanTestCase@6adbc9d]" started-at="2025-05-03T21:12:33 EDT" name="personalLoan" data-provider="getData" finished-at="2025-05-03T21:12:33 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invaliddata]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[invaliddatapassword]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homeLoan -->
-        <test-method signature="apiLoan()[pri:0, instance:framework.HomeLoanTestCases@7e07db1f]" started-at="2025-05-01T20:16:33 EDT" name="apiLoan" finished-at="2025-05-01T20:16:33 EDT" duration-ms="1" status="PASS">
+        </test-method> <!-- personalLoan -->
+        <test-method signature="personalLoan(java.lang.String,java.lang.String)[pri:0, instance:framework.PersonalLoanTestCase@6adbc9d]" started-at="2025-05-03T21:12:33 EDT" name="personalLoan" data-provider="getData" finished-at="2025-05-03T21:12:33 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apiLoan -->
-        <test-method signature="appiumHomeLoan()[pri:0, instance:framework.HomeLoanTestCases@7e07db1f]" started-at="2025-05-01T20:16:33 EDT" name="appiumHomeLoan" finished-at="2025-05-01T20:16:33 EDT" depends-on-methods="framework.HomeLoanTestCases.homeLoan" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- appiumHomeLoan -->
-      </class> <!-- framework.HomeLoanTestCases -->
+        </test-method> <!-- personalLoan -->
+      </class> <!-- framework.PersonalLoanTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
