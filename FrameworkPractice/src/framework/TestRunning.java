@@ -1,5 +1,6 @@
 package framework;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -31,6 +32,7 @@ public class TestRunning {
 	@Test
 	public void Demo2() {
 		System.out.println("Test Case 2");
+		Assert.assertTrue(false);
 	}
 	
 	@BeforeTest

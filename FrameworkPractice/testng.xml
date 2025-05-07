@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite"> <!-- This can be considered as regrssion or smoke suite-->
+<suite name="Suite" parallel="tests" thread-count="2"> <!-- This can be considered as regrssion or smoke suite-->
 
 	<listeners>
-		<listener class-name="framework.Listeners"/>
+		<listener class-name="framework.Listeners" />
 	</listeners>
-	<test thread-count="5" name="Personal Loan"> <!--Test folder name = module-->
+
+	<test thread-count="5" name="Personal Loan" parallel="classes"> <!--Test folder name = module-->
 		<parameter name="URL" value="personalLoan.com" />
 		<classes>
 			<class name="framework.TestRunning"> <!--Test Cases-->
