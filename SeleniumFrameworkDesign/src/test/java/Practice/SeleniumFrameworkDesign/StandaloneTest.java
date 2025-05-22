@@ -67,7 +67,6 @@ public class StandaloneTest {
 		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 
 		
-		
 	}
 
 }
