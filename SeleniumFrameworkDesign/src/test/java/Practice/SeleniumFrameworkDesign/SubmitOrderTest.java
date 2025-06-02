@@ -11,9 +11,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import Practice.SeleniumFrameworkDesign.pageobjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StandaloneTest {
+public class SubmitOrderTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,10 +24,12 @@ public class StandaloneTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
-		driver.get("https://rahulshettyacademy.com/client");
-		driver.findElement(By.id("userEmail")).sendKeys("princec@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("Prince@123");
-		driver.findElement(By.id("login")).click();
+
+		LandingPage landingpage = new LandingPage(driver);
+		
+		landingpage.goTo();
+		landingpage.loginApplication("princec@gmail.com", "Prince@123");
+		
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));	
