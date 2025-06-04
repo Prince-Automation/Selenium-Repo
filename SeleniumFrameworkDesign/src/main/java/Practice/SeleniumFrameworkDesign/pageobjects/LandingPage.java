@@ -6,16 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage {
+import Practice.SeleniumFrameworkDesign.AbstractComponent.AbstractComponent;
+
+public class LandingPage extends AbstractComponent{
 	
 	WebDriver driver;
 	
 	public LandingPage(WebDriver driver) { // created constructor
+		super(driver);
 		// initialization
-		this.driver = driver; 
+		this.driver = driver;
 		PageFactory.initElements(driver, this); // inorder to create the driver.findElement for FindBy Page factory
 	}
-
 
 	
 	//	WebElement userEmail = driver.findElement(By.id("userEmail"));
@@ -32,10 +34,12 @@ public class LandingPage {
 	WebElement loginButton;
 	
 	// creating action methods
-	public void loginApplication(String email, String password ) {
+	public ProductCatalogue loginApplication(String email, String password ) {
 		userEmail.sendKeys(email);
 		userPassword.sendKeys(password);
 		loginButton.click();
+		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
+		return productCatalogue;
 	}
 	
 	public void goTo() {

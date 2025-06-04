@@ -11,14 +11,18 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import Practice.SeleniumFrameworkDesign.pageobjects.CartPage;
+import Practice.SeleniumFrameworkDesign.pageobjects.CheckoutPage;
+import Practice.SeleniumFrameworkDesign.pageobjects.ConfirmationPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.LandingPage;
+import Practice.SeleniumFrameworkDesign.pageobjects.ProductCatalogue;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SubmitOrderTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		String productName = "ZARA COAT 3";
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -26,50 +30,46 @@ public class SubmitOrderTest {
 		driver.manage().window().maximize();
 
 		LandingPage landingpage = new LandingPage(driver);
-		
-		landingpage.goTo();
-		landingpage.loginApplication("princec@gmail.com", "Prince@123");
-		
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));	
-		
-		List <WebElement> products = driver.findElements(By.cssSelector(".mb-3"));
-		
-		WebElement prod = products.stream().filter(product -> product.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst().orElse(null);
-		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));	
-		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));	
-		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-		
-		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		
-		Boolean match = cartProducts.stream().anyMatch(cartProduct-> cartProduct.getText().equalsIgnoreCase(productName));
-		Assert.assertTrue(match);
-		
-		driver.findElement(By.cssSelector(".totalRow button")).click();
-		
-		String countryName = "india";
-		
-		driver.findElement(By.cssSelector("[placeholder='Select Country']")).sendKeys(countryName);
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
-		
-		
-		
-		List <WebElement> Countries = driver.findElements(By.cssSelector(".ta-results button span"));
-		WebElement selectedCountry = Countries.stream().filter(country -> country.getText().equalsIgnoreCase(countryName)).findFirst().orElse(null);
-		
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		selectedCountry.click();
-		
-		driver.findElement(By.cssSelector(".action__submit")).click();
-		
-		String confirmationMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
-		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 
-		
+		landingpage.goTo();
+
+		ProductCatalogue productCatalogue = landingpage.loginApplication("princec@gmail.com", "Prince@123");
+		List<WebElement> products = productCatalogue.getProductList();
+
+		productCatalogue.addProductToCart(productName);
+
+		CartPage cartpage = productCatalogue.goToCartPage();
+
+		Boolean match = cartpage.verifyProductDisplay(productName);
+		Assert.assertTrue(match);
+		CheckoutPage checkoutPage = cartpage.goToCheckout();
+
+//		driver.findElement(By.cssSelector(".totalRow button")).click();
+
+		String countryName = "india";
+
+		checkoutPage.selectCountry(countryName);
+
+//		driver.findElement(By.cssSelector("[placeholder='Select Country']")).sendKeys(countryName);
+
+		ConfirmationPage confirmationPage = checkoutPage.submitOrder();
+//		
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
+//		
+//		
+//		
+//		List <WebElement> Countries = driver.findElements(By.cssSelector(".ta-results button span"));
+//		WebElement selectedCountry = Countries.stream().filter(country -> country.getText().equalsIgnoreCase(countryName)).findFirst().orElse(null);
+//		
+////		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//		selectedCountry.click();
+
+//		driver.findElement(By.cssSelector(".action__submit")).click();
+
+		String confirmationMessage = confirmationPage.getConfirmationMessage();
+		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
+		driver.close();
+
 	}
 
 }
