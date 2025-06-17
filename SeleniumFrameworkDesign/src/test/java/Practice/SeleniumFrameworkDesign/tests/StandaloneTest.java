@@ -1,4 +1,4 @@
-package Practice.SeleniumFrameworkDesign;
+package Practice.SeleniumFrameworkDesign.tests;
 
 import java.time.Duration;
 import java.util.List;
