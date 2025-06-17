@@ -8,13 +8,14 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Practice.SeleniumFrameworkDesign.pageobjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	
 	public WebDriver driver;
 
-	public void initializeDriver() throws IOException 
+	public WebDriver initializeDriver() throws IOException 
 	{
 		Properties prop = new Properties(); // intialize the Properties
 		// below we will shorten the Path to start from the project path and not from the system path using user.dir
@@ -26,7 +27,7 @@ public class BaseTest {
 			
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		
 		}
 		
@@ -39,5 +40,17 @@ public class BaseTest {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
+		return driver;
+	}
+	
+	public LandingPage launchApplication() throws IOException 
+	{
+		driver = initializeDriver();
+		
+		LandingPage landingpage = new LandingPage(driver);
+
+		landingpage.goTo();
+		
+		return landingpage;
 	}
 }

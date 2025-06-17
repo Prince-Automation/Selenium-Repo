@@ -1,6 +1,5 @@
 package Practice.SeleniumFrameworkDesign.tests;
 
-import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
@@ -11,9 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-import Practice.SeleniumFrameworkDesign.TestComponents.BaseTest;
 import Practice.SeleniumFrameworkDesign.pageobjects.CartPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.CheckoutPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.ConfirmationPage;
@@ -21,17 +18,22 @@ import Practice.SeleniumFrameworkDesign.pageobjects.LandingPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.ProductCatalogue;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SubmitOrderTest extends BaseTest {
+public class SubmitOrderTestOriginal {
 
-	@Test
-	public void submitOrder() throws IOException{
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		String productName = "ZARA COAT 3";
-		LandingPage landingpage = launchApplication();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
+
+		LandingPage landingpage = new LandingPage(driver);
+
+		landingpage.goTo();
 
 		ProductCatalogue productCatalogue = landingpage.loginApplication("princec@gmail.com", "Prince@123");
-		
 		List<WebElement> products = productCatalogue.getProductList();
 
 		productCatalogue.addProductToCart(productName);
