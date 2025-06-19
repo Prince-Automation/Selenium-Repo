@@ -28,7 +28,6 @@ public class SubmitOrderTest extends BaseTest {
 		// TODO Auto-generated method stub
 
 		String productName = "ZARA COAT 3";
-		LandingPage landingpage = launchApplication();
 
 		ProductCatalogue productCatalogue = landingpage.loginApplication("princec@gmail.com", "Prince@123");
 		
@@ -66,7 +65,6 @@ public class SubmitOrderTest extends BaseTest {
 
 		String confirmationMessage = confirmationPage.getConfirmationMessage();
 		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-		driver.close();
 
 	}
 

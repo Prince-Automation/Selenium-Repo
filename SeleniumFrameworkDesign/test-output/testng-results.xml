@@ -2,15 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-17T13:07:47 EDT" name="Default suite" finished-at="2025-06-17T13:08:09 EDT" duration-ms="21619">
+  <suite started-at="2025-06-19T11:47:29 EDT" name="Default suite" finished-at="2025-06-19T11:47:50 EDT" duration-ms="21309">
     <groups>
     </groups>
-    <test started-at="2025-06-17T13:07:47 EDT" name="Default test" finished-at="2025-06-17T13:08:09 EDT" duration-ms="21619">
+    <test started-at="2025-06-19T11:47:29 EDT" name="Default test" finished-at="2025-06-19T11:47:50 EDT" duration-ms="21309">
       <class name="Practice.SeleniumFrameworkDesign.tests.SubmitOrderTest">
-        <test-method signature="submitOrder()[pri:0, instance:Practice.SeleniumFrameworkDesign.tests.SubmitOrderTest@5fe94a96]" started-at="2025-06-17T13:07:47 EDT" name="submitOrder" finished-at="2025-06-17T13:08:09 EDT" duration-ms="21571" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Practice.SeleniumFrameworkDesign.tests.SubmitOrderTest@62379589]" started-at="2025-06-19T11:47:29 EDT" name="launchApplication" finished-at="2025-06-19T11:47:35 EDT" duration-ms="5670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder()[pri:0, instance:Practice.SeleniumFrameworkDesign.tests.SubmitOrderTest@62379589]" started-at="2025-06-19T11:47:35 EDT" name="submitOrder" finished-at="2025-06-19T11:47:50 EDT" duration-ms="15457" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Practice.SeleniumFrameworkDesign.tests.SubmitOrderTest@62379589]" started-at="2025-06-19T11:47:50 EDT" name="tearDown" finished-at="2025-06-19T11:47:50 EDT" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- Practice.SeleniumFrameworkDesign.tests.SubmitOrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
