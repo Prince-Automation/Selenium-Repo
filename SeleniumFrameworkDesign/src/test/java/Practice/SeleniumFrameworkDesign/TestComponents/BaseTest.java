@@ -46,7 +46,7 @@ public class BaseTest {
 		return driver;
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)// so that the pre-req run even for a group annotations
 	public LandingPage launchApplication() throws IOException 
 	{
 		driver = initializeDriver();
@@ -58,7 +58,7 @@ public class BaseTest {
 		return landingpage;
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true) // so that the pre-req run even for a group annotations
 	public void tearDown()
 	{
 		driver.close();

@@ -18,16 +18,18 @@ import Practice.SeleniumFrameworkDesign.pageobjects.CartPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.CheckoutPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.ConfirmationPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.LandingPage;
+import Practice.SeleniumFrameworkDesign.pageobjects.OrderPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.ProductCatalogue;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SubmitOrderTest extends BaseTest {
 
+	String productName = "ZARA COAT 3";
 	@Test
 	public void submitOrder() throws IOException{
 		// TODO Auto-generated method stub
 
-		String productName = "ZARA COAT 3";
+		
 
 		ProductCatalogue productCatalogue = landingpage.loginApplication("princec@gmail.com", "Prince@123");
 		
@@ -67,5 +69,15 @@ public class SubmitOrderTest extends BaseTest {
 		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
 
 	}
+	
+	@Test(dependsOnMethods = {"submitOrder"})
+	public void OrderHistoryTest() {
+		ProductCatalogue productCatalogue = landingpage.loginApplication("princec@gmail.com", "Prince@123");
+		OrderPage orderpage = productCatalogue.goToOrdersPage();
+		Assert.assertTrue(orderpage.verifyOrderDisplay(productName));
+		
+	}
+	
+	
 
 }
