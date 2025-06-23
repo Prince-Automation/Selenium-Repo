@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Practice.SeleniumFrameworkDesign.TestComponents.BaseTest;
@@ -25,13 +26,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SubmitOrderTest extends BaseTest {
 
 	String productName = "ZARA COAT 3";
-	@Test
-	public void submitOrder() throws IOException{
+	
+	@Test(dataProvider = "getData", groups = {"Purchase"})
+	public void submitOrder(String email, String pass, String productName) throws IOException{
 		// TODO Auto-generated method stub
 
 		
 
-		ProductCatalogue productCatalogue = landingpage.loginApplication("princec@gmail.com", "Prince@123");
+		ProductCatalogue productCatalogue = landingpage.loginApplication(email, pass);
 		
 		List<WebElement> products = productCatalogue.getProductList();
 
@@ -76,6 +78,13 @@ public class SubmitOrderTest extends BaseTest {
 		OrderPage orderpage = productCatalogue.goToOrdersPage();
 		Assert.assertTrue(orderpage.verifyOrderDisplay(productName));
 		
+	}
+	
+	@DataProvider
+	public Object[][] getData() {
+		return new Object[][] {{"princec@gmail.com","Prince@123", "ZARA COAT 3"},{"princegeneric@gmail.com","Princegeneric@123", "ADIDAS ORIGINAL"} };
+		
+	
 	}
 	
 	
