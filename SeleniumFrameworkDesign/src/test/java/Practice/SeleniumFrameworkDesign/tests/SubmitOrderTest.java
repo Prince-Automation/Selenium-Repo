@@ -2,6 +2,7 @@ package Practice.SeleniumFrameworkDesign.tests;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -28,20 +29,20 @@ public class SubmitOrderTest extends BaseTest {
 	String productName = "ZARA COAT 3";
 	
 	@Test(dataProvider = "getData", groups = {"Purchase"})
-	public void submitOrder(String email, String pass, String productName) throws IOException{
+	public void submitOrder(HashMap<String, String> input) throws IOException{
 		// TODO Auto-generated method stub
 
 		
 
-		ProductCatalogue productCatalogue = landingpage.loginApplication(email, pass);
+		ProductCatalogue productCatalogue = landingpage.loginApplication(input.get("email"), input.get("password"));
 		
 		List<WebElement> products = productCatalogue.getProductList();
 
-		productCatalogue.addProductToCart(productName);
+		productCatalogue.addProductToCart(input.get("productName"));
 
 		CartPage cartpage = productCatalogue.goToCartPage();
 
-		Boolean match = cartpage.verifyProductDisplay(productName);
+		Boolean match = cartpage.verifyProductDisplay(input.get("productName"));
 		Assert.assertTrue(match);
 		CheckoutPage checkoutPage = cartpage.goToCheckout();
 
@@ -81,12 +82,38 @@ public class SubmitOrderTest extends BaseTest {
 	}
 	
 	@DataProvider
-	public Object[][] getData() {
-		return new Object[][] {{"princec@gmail.com","Prince@123", "ZARA COAT 3"},{"princegeneric@gmail.com","Princegeneric@123", "ADIDAS ORIGINAL"} };
+	public Object[][] getData() throws IOException {
+		
+		List<HashMap<String, String>> data = getJsonDatatoMap(System.getProperty("user.dir")
+				+ "\\src\\test\\java\\Practice\\SeleniumFrameworkDesign\\data\\PurchaseOrder.json");
+		
+		return new Object[][] {{data.get(0)},{data.get(1)}};
 		
 	
 	}
 	
 	
+//	@DataProvider
+//	public Object[][] getData() {
+//		
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		map.put("email","princec@gmail.com");
+//		map.put("password", "Prince@123");
+//		map.put("productName", "ZARA COAT 3");
+//		
+//		HashMap<String, String> map1 = new HashMap<String, String>();
+//		map1.put("email","princegeneric@gmail.com");
+//		map1.put("password", "Princegeneric@123");
+//		map1.put("productName", "ADIDAS ORIGINAL");
+//		
+//		return new Object[][] {{map},{map1}};
+//		
+//	
+//	}
+	
+//	@DataProvider
+//	public Object[][] getData() {
+//		return new Object[][] {{"princec@gmail.com","Prince@123", "ZARA COAT 3"},{"princegeneric@gmail.com","Princegeneric@123", "ADIDAS ORIGINAL"} };
+//	}
 
 }

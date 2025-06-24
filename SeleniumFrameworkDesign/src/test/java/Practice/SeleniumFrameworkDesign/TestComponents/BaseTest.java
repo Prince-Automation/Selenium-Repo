@@ -1,14 +1,22 @@
 package Practice.SeleniumFrameworkDesign.TestComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import Practice.SeleniumFrameworkDesign.pageobjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -44,6 +52,23 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		return driver;
+	}
+	
+//	converting Jason to Hashmap
+	public List<HashMap<String, String>> getJsonDatatoMap(String filePath) throws IOException {
+		// read the json to string
+		String jsonContent = FileUtils.readFileToString(
+				new File(filePath),
+				StandardCharsets.UTF_8);
+
+		// string to HashMap Jackson Databind
+		ObjectMapper mapper = new ObjectMapper();
+
+		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
+				new TypeReference<List<HashMap<String, String>>>() {});
+
+		return data;
+
 	}
 	
 	@BeforeMethod(alwaysRun = true)// so that the pre-req run even for a group annotations
