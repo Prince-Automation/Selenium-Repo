@@ -54,7 +54,7 @@ public class BaseTest {
 		return driver;
 	}
 	
-//	converting Jason to Hashmap
+//	converting Json to Hashmap
 	public List<HashMap<String, String>> getJsonDatatoMap(String filePath) throws IOException {
 		// read the json to string
 		String jsonContent = FileUtils.readFileToString(
