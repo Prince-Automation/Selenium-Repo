@@ -22,7 +22,7 @@ public class ExtentReportDemo {
 		
 		String path = System.getProperty("user.dir")+"\\reports\\index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path); // this expects the html file where it has to create the report
-		reporter.config().setReportName("web automation results");	
+		reporter.config().setReportName("Web Automation Results");	
 		reporter.config().setDocumentTitle("Test Results");
 		
 		extent = new ExtentReports();
