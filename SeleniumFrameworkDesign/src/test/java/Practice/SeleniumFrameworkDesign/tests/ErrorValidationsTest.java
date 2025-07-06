@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Practice.SeleniumFrameworkDesign.TestComponents.BaseTest;
+import Practice.SeleniumFrameworkDesign.TestComponents.Retry;
 import Practice.SeleniumFrameworkDesign.pageobjects.CartPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.CheckoutPage;
 import Practice.SeleniumFrameworkDesign.pageobjects.ConfirmationPage;
@@ -25,7 +26,7 @@ public class ErrorValidationsTest extends BaseTest {
 		
 	}
 	
-	@Test(groups = {"ErrorHandling"})
+	@Test(groups = {"ErrorHandling"}, retryAnalyzer = Retry.class)
 	public void ProductErrorValidation() throws IOException{
 		// TODO Auto-generated method stub
 

@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -69,6 +71,16 @@ public class BaseTest {
 
 		return data;
 
+	}
+	
+	// method to get the screenshot
+	public String getScreenshot(String testcaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot)driver; // inform driver we need to take screenshot
+		File source = ts.getScreenshotAs(OutputType.FILE); // save the screenshot in file format
+		File destfile = new File(System.getProperty("user.dir")+"//reports//" + testcaseName + ".png");
+		FileUtils.copyFile(source, destfile); // store the screenshot 
+		
+		return System.getProperty("user.dir")+"//reports//" + testcaseName + ".png";
 	}
 	
 	@BeforeMethod(alwaysRun = true)// so that the pre-req run even for a group annotations
