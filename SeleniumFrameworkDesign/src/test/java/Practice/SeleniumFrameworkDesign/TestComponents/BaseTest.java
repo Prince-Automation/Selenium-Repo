@@ -14,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -34,11 +35,13 @@ public class BaseTest {
 		// below we will shorten the Path to start from the project path and not from the system path using user.dir
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Practice\\SeleniumFrameworkDesign\\resources\\GlobalData.properties"); // providing the Path
 		prop.load(fis); // load the properties file to get the key value. but this requires a FileInput Stream
-		String browserName = prop.getProperty("browser");
-
-		if(browserName.equalsIgnoreCase("chrome")) {
-			
 		
+		// it will take the maven property else from the property file
+		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
+		
+//		String browserName = prop.getProperty("browser");
+
+		if(browserName.equalsIgnoreCase("chrome")) {		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		
@@ -46,6 +49,8 @@ public class BaseTest {
 		
 		else if(browserName.equalsIgnoreCase("firefox")) {
 			// firefox
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 		}
 		else if(browserName.equalsIgnoreCase("edge")) {
 			// edge
